@@ -26,12 +26,12 @@ lazy val asyncHttpClient = project
     description := "async http client implementation for http4s clients",
     startYear := Some(2016),
     libraryDependencies ++= Seq(
-      "org.http4s" %% "http4s-core" % http4sVersion,
+      "org.http4s" %% "http4s-client" % http4sVersion,
       "org.asynchttpclient" % "async-http-client" % asyncHttpClientVersion,
       "co.fs2" %% "fs2-reactive-streams" % fs2Version,
       "io.netty" % "netty-buffer" % nettyVersion,
       "io.netty" % "netty-codec-http" % nettyVersion,
       "org.reactivestreams" % "reactive-streams" % reactiveStreamsVersion,
-      "org.http4s" %% "http4s-client-testkit" % http4sVersion % Test,
+      "org.http4s" %% "http4s-client-testkit" % "0.23.11-473-e7e64cb-SNAPSHOT" % Test,
     ),
   )
