@@ -22,6 +22,7 @@ ThisBuild / resolvers +=
 lazy val asyncHttpClient = project
   .in(file("async-http-client"))
   .settings(
+    name := "http4s-async-http-client",
     description := "async http client implementation for http4s clients",
     startYear := Some(2016),
     libraryDependencies ++= Seq(
