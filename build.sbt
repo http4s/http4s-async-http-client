@@ -10,7 +10,7 @@ ThisBuild / scalaVersion := Scala213
 
 lazy val root = project.in(file(".")).aggregate(asyncHttpClient).enablePlugins(NoPublishPlugin)
 
-val http4sVersion = "0.23.11"
+val http4sVersion = "0.23.12"
 val asyncHttpClientVersion = "2.12.3"
 val fs2Version = "3.2.7"
 val nettyVersion = "4.1.77.Final"
