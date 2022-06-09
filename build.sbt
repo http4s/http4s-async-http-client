@@ -14,7 +14,7 @@ val http4sVersion = "0.23.11"
 val asyncHttpClientVersion = "2.12.3"
 val fs2Version = "3.2.7"
 val nettyVersion = "4.1.77.Final"
-val reactiveStreamsVersion = "1.0.3"
+val reactiveStreamsVersion = "1.0.4"
 
 ThisBuild / resolvers +=
   "s01 snapshots".at("https://s01.oss.sonatype.org/content/repositories/snapshots/")
