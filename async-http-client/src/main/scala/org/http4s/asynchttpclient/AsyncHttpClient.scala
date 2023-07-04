@@ -64,7 +64,7 @@ object AsyncHttpClient {
           F.delay(
             httpClient
               .executeRequest(toAsyncRequest(req, dispatcher), asyncHandler(cb, dispatcher))
-          ).as(None)
+          ).as(Some(F.unit))
         })
       }
 

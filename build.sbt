@@ -4,20 +4,17 @@ ThisBuild / developers := List(
   tlGitHubDev("rossabaker", "Ross A. Baker")
 )
 
-val Scala213 = "2.13.8"
-ThisBuild / crossScalaVersions := Seq("2.12.15", Scala213, "3.1.2")
+val Scala213 = "2.13.11"
+ThisBuild / crossScalaVersions := Seq("2.12.18", Scala213, "3.3.0")
 ThisBuild / scalaVersion := Scala213
 
 lazy val root = project.in(file(".")).aggregate(asyncHttpClient).enablePlugins(NoPublishPlugin)
 
-val http4sVersion = "0.23.11"
+val http4sVersion = "0.23.22"
 val asyncHttpClientVersion = "2.12.3"
-val fs2Version = "3.2.7"
-val nettyVersion = "4.1.77.Final"
-val reactiveStreamsVersion = "1.0.3"
-
-ThisBuild / resolvers +=
-  "s01 snapshots".at("https://s01.oss.sonatype.org/content/repositories/snapshots/")
+val fs2Version = "3.7.0"
+val nettyVersion = "4.1.94.Final"
+val reactiveStreamsVersion = "1.0.4"
 
 lazy val asyncHttpClient = project
   .in(file("async-http-client"))
@@ -32,6 +29,6 @@ lazy val asyncHttpClient = project
       "io.netty" % "netty-buffer" % nettyVersion,
       "io.netty" % "netty-codec-http" % nettyVersion,
       "org.reactivestreams" % "reactive-streams" % reactiveStreamsVersion,
-      "org.http4s" %% "http4s-client-testkit" % "0.23.11-473-e7e64cb-SNAPSHOT" % Test,
+      "org.http4s" %% "http4s-client-testkit" % http4sVersion % Test,
     ),
   )
